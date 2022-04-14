@@ -44,7 +44,13 @@ export const InputItems = styled.div`
   width: 100%;
 `;
 
+export const AmountWrapper = styled.div`
+  display: flex;
+`;
+
 export const Total = styled.p`
+  margin-right: 10px;
+
   font-weight: 500;
   font-size: 24px;
   line-height: 35px;

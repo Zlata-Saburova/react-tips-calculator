@@ -6,6 +6,7 @@ import {
   TotalAmount,
   Wrapper,
   InputItems,
+  AmountWrapper,
 } from "./styles";
 
 import { Button } from "../Button/Button";
@@ -17,8 +18,10 @@ export const Form = () => {
         <Title>Welcome to App</Title>
         <Text>Let`s go calculate your tips</Text>
         <InputItems></InputItems>
-        <Total>Total:</Total>
-        <TotalAmount></TotalAmount>
+        <AmountWrapper>
+          <Total>Total:</Total>
+          <TotalAmount>0.00$</TotalAmount>
+        </AmountWrapper>
         <Button></Button>
       </StyledForm>
     </Wrapper>
