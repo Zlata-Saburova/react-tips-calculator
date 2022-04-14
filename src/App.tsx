@@ -1,6 +1,14 @@
 import React from "react";
-import "./App.css";
+import { Form } from "./components/Form/Form";
+import GlobalStyle from "./GlobalStyles";
 
-function App() {}
+function App() {
+  return (
+    <>
+      <GlobalStyle />
+      <Form></Form>
+    </>
+  );
+}
 
 export default App;
