@@ -4,10 +4,11 @@ import {
   Text,
   Total,
   TotalAmount,
-  Button,
   Wrapper,
   InputItems,
 } from "./styles";
+
+import { Button } from "../Button/Button";
 
 export const Form = () => {
   return (
@@ -18,7 +19,7 @@ export const Form = () => {
         <InputItems></InputItems>
         <Total>Total:</Total>
         <TotalAmount></TotalAmount>
-        <Button>Ohhhoooo 🍻 </Button>
+        <Button></Button>
       </StyledForm>
     </Wrapper>
   );
