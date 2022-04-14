@@ -30,6 +30,14 @@ export const Text = styled.p`
   color: rgba(117, 108, 108, 0.57);
 `;
 
+export const InputItems = styled.div`
+  margin: 0 auto;
+  display: grid;
+  gap: 33px;
+  max-width: 460px;
+  width: 100%;
+`;
+
 export const Total = styled.p`
   font-weight: 500;
   font-size: 24px;

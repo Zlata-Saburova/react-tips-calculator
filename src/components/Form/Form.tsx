@@ -6,6 +6,7 @@ import {
   TotalAmount,
   Button,
   Wrapper,
+  InputItems,
 } from "./styles";
 
 export const Form = () => {
@@ -14,6 +15,7 @@ export const Form = () => {
       <StyledForm>
         <Title>Welcome to App</Title>
         <Text>Let`s go calculate your tips</Text>
+        <InputItems></InputItems>
         <Total>Total:</Total>
         <TotalAmount></TotalAmount>
         <Button>Ohhhoooo 🍻 </Button>
