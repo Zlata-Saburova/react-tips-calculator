@@ -20,6 +20,14 @@ button {
   font-family: inherit;
 }
 
+input, select {
+  border: none;
+
+  &:focus{
+    outline: none;
+  }
+}
+
 body {
     background: no-repeat top left url(${circles}) #EAF2F2;
     background-size: 171px 150px;
