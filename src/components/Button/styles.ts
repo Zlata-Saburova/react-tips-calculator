@@ -10,4 +10,14 @@ export const StyledButton = styled.button`
   color: #ffffff;
 
   background-color: #2ed2c9;
+
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #25ada5;
+  }
+
+  &:active {
+    background-color: #2ed2c9;
+  }
 `;
