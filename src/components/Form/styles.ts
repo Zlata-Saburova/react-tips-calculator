@@ -68,10 +68,20 @@ export const Total = styled.p`
   line-height: 35px;
 
   color: #000000;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
 `;
 
 export const TotalAmount = styled.span`
   font-weight: 500;
   font-size: 24px;
   line-height: 35px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
 `;
