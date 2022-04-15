@@ -14,6 +14,10 @@ export const StyledForm = styled.form`
   max-width: 460px;
   padding-top: 170px;
   width: 100%;
+
+  @media (max-width: 1024px) {
+    max-width: 340px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -21,6 +25,11 @@ export const Title = styled.h1`
   font-size: 40px;
   line-height: 58px;
   text-align: center;
+
+  @media (max-width: 1024px) {
+    font-size: 24px;
+    line-height: 35px;
+  }
 `;
 
 export const Text = styled.p`
@@ -30,6 +39,11 @@ export const Text = styled.p`
   text-align: center;
 
   color: rgba(117, 108, 108, 0.57);
+
+  @media (max-width: 1024px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
 `;
 
 export const InputItems = styled.div`
@@ -39,6 +53,11 @@ export const InputItems = styled.div`
   margin: 0 auto;
   max-width: 460px;
   width: 100%;
+
+  @media (max-width: 1024px) {
+    gap: 17px;
+    max-width: 340px;
+  }
 `;
 
 export const Total = styled.p`

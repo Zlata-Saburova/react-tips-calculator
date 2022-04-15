@@ -20,4 +20,8 @@ export const StyledButton = styled.button`
   &:active {
     background-color: #2ed2c9;
   }
+
+  @media (max-width: 1024px) {
+    max-width: 332px;
+  }
 `;
