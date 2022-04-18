@@ -4,5 +4,3 @@ export interface ICheque {
   tip: number;
   total: number;
 }
-
-export type tipTercent = "10%" | "15%" | "20%";

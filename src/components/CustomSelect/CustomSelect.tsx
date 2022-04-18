@@ -1,5 +1,9 @@
 import { Select } from "./styles";
 
-export const CustomSelect = () => {
-  return <Select></Select>;
+interface IProps {
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+}
+
+export const CustomSelect = ({ onChange }: IProps) => {
+  return <Select onChange={onChange}></Select>;
 };

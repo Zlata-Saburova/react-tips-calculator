@@ -69,15 +69,4 @@ const Total = styled.p`
   }
 `;
 
-const TotalAmount = styled.span`
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 35px;
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-    line-height: 26px;
-  }
-`;
-
-export { StyledForm, Title, Text, InputContainer, Total, TotalAmount };
+export { StyledForm, Title, Text, InputContainer, Total };
