@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-  margin: 0 auto 100px;
-  width: 100%;
-  max-width: 1440px;
-  padding: 0 16px;
-`;
-export const StyledForm = styled.form`
+const StyledForm = styled.form`
   display: grid;
   gap: 45px;
 
@@ -20,7 +14,7 @@ export const StyledForm = styled.form`
   }
 `;
 
-export const Title = styled.h1`
+const Title = styled.h1`
   font-weight: 400;
   font-size: 40px;
   line-height: 58px;
@@ -32,7 +26,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const Text = styled.p`
+const Text = styled.p`
   font-weight: 400;
   font-size: 32px;
   line-height: 38px;
@@ -46,7 +40,7 @@ export const Text = styled.p`
   }
 `;
 
-export const InputItems = styled.div`
+const InputContainer = styled.div`
   display: grid;
   gap: 33px;
 
@@ -60,7 +54,7 @@ export const InputItems = styled.div`
   }
 `;
 
-export const Total = styled.p`
+const Total = styled.p`
   margin-right: 10px;
 
   font-weight: 500;
@@ -75,7 +69,7 @@ export const Total = styled.p`
   }
 `;
 
-export const TotalAmount = styled.span`
+const TotalAmount = styled.span`
   font-weight: 500;
   font-size: 24px;
   line-height: 35px;
@@ -85,3 +79,5 @@ export const TotalAmount = styled.span`
     line-height: 26px;
   }
 `;
+
+export { StyledForm, Title, Text, InputContainer, Total, TotalAmount };

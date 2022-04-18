@@ -1,5 +1,5 @@
 import { StyledButton } from "./styles";
 
 export const Button = () => {
-  return <StyledButton>Ohhhoooo 🍻 </StyledButton>;
+  return <StyledButton type="submit">Ohhhoooo 🍻 </StyledButton>;
 };

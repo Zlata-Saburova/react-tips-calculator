@@ -1,14 +1,18 @@
 import React from "react";
+import styled from "styled-components";
 import { Form } from "./components/Form/Form";
-import GlobalStyle from "./GlobalStyles";
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
+    <StyledApp>
       <Form></Form>
-    </>
+    </StyledApp>
   );
 }
 
+const StyledApp = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 export default App;
