@@ -15,9 +15,11 @@ const GlobalStyle = createGlobalStyle`
 button {
   border: 0;
   background: none;
-  cursor: pointer;
   outline: none;
+
   font-family: inherit;
+
+  cursor: pointer;
 }
 
 input, select {
@@ -29,10 +31,13 @@ input, select {
 }
 
 body {
-    background: no-repeat top left url(${circles}) #EAF2F2;
-    background-size: 171px 150px;
 
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  background: no-repeat top left url(${circles}) #EAF2F2;
+  background-size: 171px 150px;
+
+    
 }
 `;
 

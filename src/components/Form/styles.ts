@@ -5,9 +5,9 @@ const StyledForm = styled.form`
   gap: 45px;
 
   margin: 0 auto;
-  max-width: 460px;
   padding-top: 170px;
   padding-bottom: 50px;
+  max-width: 460px;
   width: 100%;
 
   @media (max-width: 1024px) {
