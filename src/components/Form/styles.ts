@@ -7,6 +7,7 @@ const StyledForm = styled.form`
   margin: 0 auto;
   max-width: 460px;
   padding-top: 170px;
+  padding-bottom: 50px;
   width: 100%;
 
   @media (max-width: 1024px) {
