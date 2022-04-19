@@ -2,9 +2,11 @@ import { StyledForm, Title, Text, Total, InputContainer } from "./styles";
 
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
-import { Select } from "../CustomSelect/styles";
 import React, { useEffect, useState } from "react";
 import { ICheque } from "../../types";
+import { CustomSelect } from "../CustomSelect/CustomSelect";
+import { SingleValue } from "react-select";
+import { Option } from "../../types/index";
 
 export const Form = () => {
   const [cheque, setCheque] = useState<ICheque>({
@@ -28,11 +30,13 @@ export const Form = () => {
     });
   };
 
-  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setCheque({
-      ...cheque,
-      tip: +e.target.value,
-    });
+  const handleSelect = (e: SingleValue<Option>) => {
+    if (e) {
+      setCheque({
+        ...cheque,
+        tip: e.value,
+      });
+    }
   };
 
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
@@ -65,11 +69,7 @@ export const Form = () => {
           min="1"
           onChange={handleChangePersons}
         ></Input>
-        <Select onChange={handleSelect}>
-          <option>10</option>
-          <option>15</option>
-          <option>20</option>
-        </Select>
+        <CustomSelect onChange={handleSelect}></CustomSelect>
       </InputContainer>
       <Total>Total: {cheque.total.toFixed(2)}$</Total>
       <Button></Button>
