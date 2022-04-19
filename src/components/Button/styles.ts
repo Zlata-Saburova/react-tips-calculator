@@ -23,6 +23,14 @@ export const StyledButton = styled.button`
     background-color: #2ed2c9;
   }
 
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+    &:hover {
+      background-color: #2ed2c9;
+    }
+  }
+
   @media (max-width: 1024px) {
     max-width: 332px;
   }

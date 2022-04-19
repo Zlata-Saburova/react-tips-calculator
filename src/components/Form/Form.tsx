@@ -51,6 +51,16 @@ export const Form = () => {
     }
   };
 
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+
+  useEffect(() => {
+    if (cheque.bill > 0 && cheque.persons > 0) {
+      setIsBtnDisabled(false);
+    } else {
+      setIsBtnDisabled(true);
+    }
+  }, [cheque]);
+
   return (
     <StyledForm onSubmit={handleSubmit}>
       <Title>Welcome to App</Title>
@@ -72,7 +82,7 @@ export const Form = () => {
         <CustomSelect onChange={handleSelect}></CustomSelect>
       </InputContainer>
       <Total>Total: {cheque.total.toFixed(2)}$</Total>
-      <Button></Button>
+      <Button disabled={isBtnDisabled}></Button>
     </StyledForm>
   );
 };
