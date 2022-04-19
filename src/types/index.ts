@@ -7,7 +7,7 @@ export interface ICheque {
   total: number;
 }
 
-export interface Option {
+export interface IOption {
   value: number;
   label: string;
 }

@@ -4,9 +4,9 @@ import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
 import React, { useEffect, useState } from "react";
 import { ICheque } from "../../types";
-import { CustomSelect } from "../CustomSelect/CustomSelect";
 import { SingleValue } from "react-select";
-import { Option } from "../../types/index";
+import { IOption } from "../../types/index";
+import { CustomSelect } from "../CustomSelect/CustomSelect";
 
 export const Form = () => {
   const [cheque, setCheque] = useState<ICheque>({
@@ -30,7 +30,7 @@ export const Form = () => {
     });
   };
 
-  const handleSelect = (e: SingleValue<Option>) => {
+  const handleSelect = (e: SingleValue<IOption>) => {
     if (e) {
       setCheque({
         ...cheque,
