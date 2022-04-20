@@ -17,7 +17,7 @@ export const CustomSelect = ({ onChange }: ISelect) => {
       options={options}
       onChange={onChange}
       styles={customStyles}
-      value={options[0]}
+      defaultValue={{ value: 10, label: "10%" }}
     />
   );
 };
@@ -43,6 +43,8 @@ const customStyles: {} = {
     border: "none",
     maxWidth: "456px",
     width: "100%",
+
+    cursor: "pointer",
   }),
 
   singleValue: (provided: {}) => ({
