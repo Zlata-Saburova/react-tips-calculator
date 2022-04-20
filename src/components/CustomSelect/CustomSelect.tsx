@@ -28,10 +28,6 @@ const customStyles: {} = {
     borderRadius: "30px",
     backgroundColor: state.isSelected ? "#2ED2C9" : "#fff",
     cursor: "pointer",
-
-    "&:hover": {
-      backgroundColor: "#80ded9ad",
-    },
   }),
 
   control: (provided: {}) => ({
