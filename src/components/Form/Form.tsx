@@ -61,6 +61,7 @@ export const Form = () => {
       <Text>Let`s go calculate your tips</Text>
       <InputContainer>
         <Input
+          value={cheque.bill}
           name="bill"
           type="number"
           placeholder="Enter bill"
@@ -69,6 +70,7 @@ export const Form = () => {
           onChange={handleInput}
         ></Input>
         <Input
+          value={cheque.persons}
           name="persons"
           type="number"
           placeholder="Enter  persons"
