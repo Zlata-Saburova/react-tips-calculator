@@ -2,7 +2,7 @@ import { StyledForm, Title, Text, Total, InputContainer } from "./styles";
 
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
-import React, { useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import { ICheque } from "../../types";
 import { SingleValue } from "react-select";
 import { IOption } from "../../types/index";
@@ -16,7 +16,7 @@ export const Form = () => {
     total: 0,
   });
 
-  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setCheque({
       ...cheque,
@@ -33,7 +33,7 @@ export const Form = () => {
     }
   };
 
-  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     const sum: number =
       (+cheque.bill + +cheque.bill * (+cheque.tip.value / 100)) /
