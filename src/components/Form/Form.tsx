@@ -20,7 +20,7 @@ export const Form = () => {
     const { name, value } = e.target;
     setCheque({
       ...cheque,
-      [name]: +value,
+      [name]: value,
     });
   };
 
