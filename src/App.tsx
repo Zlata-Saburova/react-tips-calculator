@@ -4,7 +4,7 @@ import { Form } from "./components/Form/Form";
 function App() {
   return (
     <StyledApp>
-      <Form></Form>
+      <Form />
     </StyledApp>
   );
 }
