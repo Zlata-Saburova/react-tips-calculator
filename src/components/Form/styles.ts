@@ -7,11 +7,11 @@ const StyledForm = styled.form`
   margin: 0 auto;
   padding-top: 170px;
   padding-bottom: 50px;
-  max-width: 460px;
+  max-width: 456px;
   width: 100%;
 
   @media (max-width: 1024px) {
-    max-width: 340px;
+    max-width: 331px;
   }
 `;
 
@@ -46,12 +46,12 @@ const InputContainer = styled.div`
   gap: 33px;
 
   margin: 0 auto;
-  max-width: 460px;
+  max-width: 456px;
   width: 100%;
 
   @media (max-width: 1024px) {
     gap: 17px;
-    max-width: 340px;
+    max-width: 331px;
   }
 `;
 
