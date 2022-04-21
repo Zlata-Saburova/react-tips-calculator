@@ -52,6 +52,11 @@ export const CustomSelect = ({ handleSelect, value }: ISelect) => {
       ...provided,
       display: "none",
     }),
+
+    indicatorsContainer: (provided) => ({
+      ...provided,
+      paddingRight: "9px",
+    }),
   };
 
   return (
