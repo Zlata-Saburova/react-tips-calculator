@@ -82,7 +82,7 @@ export const Form = () => {
         <CustomSelect onChange={handleSelect}></CustomSelect>
       </InputContainer>
       <Total>Total: {cheque.total.toFixed(2)}$</Total>
-      <Button disabled={isBtnDisabled}></Button>
+      <Button isDisabled={isBtnDisabled}></Button>
     </StyledForm>
   );
 };
