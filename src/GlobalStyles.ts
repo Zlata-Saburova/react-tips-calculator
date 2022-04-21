@@ -25,7 +25,7 @@ button {
 input, select {
   border: none;
 
-  &:focus{
+  &:focus {
     outline: none;
   }
 }
