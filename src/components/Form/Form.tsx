@@ -2,7 +2,7 @@ import { StyledForm, Title, Text, Total, InputContainer } from "./styles";
 
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
-import React, { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { ICheque } from "../../types";
 import { IOption } from "../../types/index";
 import { CustomSelect } from "../CustomSelect/CustomSelect";
@@ -15,6 +15,8 @@ export const Form = () => {
     total: 0,
   });
 
+  const { bill, persons, tip, total } = cheque;
+
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setCheque({
@@ -23,20 +25,19 @@ export const Form = () => {
     });
   };
 
-  const handleSelect = (e: IOption | null) => {
-    if (e) {
+  const handleSelect = (value: IOption | null) => {
+    if (value) {
       setCheque({
         ...cheque,
-        tip: e.value,
+        tip: value.value,
       });
     }
   };
 
-  const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const sum: number =
-      (+cheque.bill + +cheque.bill * (+cheque.tip / 100)) / +cheque.persons;
-    if (cheque.bill && cheque.persons) {
+    const sum = (+bill + +bill * (+tip / 100)) / +persons;
+    if (bill && persons) {
       setCheque({
         ...cheque,
         total: sum,
@@ -44,15 +45,15 @@ export const Form = () => {
     }
   };
 
-  const [isBtnDisabled, setIsBtnDisabled] = useState<boolean>(true);
+  const [isDisabled, setIsDisabled] = useState<boolean>(true);
 
   useEffect(() => {
-    if (cheque.bill > 0 && cheque.persons > 0) {
-      setIsBtnDisabled(false);
+    if (bill > 0 && persons > 0) {
+      setIsDisabled(false);
     } else {
-      setIsBtnDisabled(true);
+      setIsDisabled(true);
     }
-  }, [cheque]);
+  }, [bill, persons]);
 
   return (
     <StyledForm onSubmit={handleSubmit}>
@@ -60,7 +61,7 @@ export const Form = () => {
       <Text>Let`s go calculate your tips</Text>
       <InputContainer>
         <Input
-          value={cheque.bill}
+          value={bill}
           name="bill"
           type="number"
           placeholder="Enter bill"
@@ -69,17 +70,17 @@ export const Form = () => {
           handleInput={handleInput}
         />
         <Input
-          value={cheque.persons}
+          value={persons}
           name="persons"
           type="number"
           placeholder="Enter  persons"
           min="1"
           handleInput={handleInput}
         />
-        <CustomSelect handleSelect={handleSelect} value={cheque.tip} />
+        <CustomSelect handleSelect={handleSelect} value={tip} />
       </InputContainer>
-      <Total>Total: {cheque.total.toFixed(2)}$</Total>
-      <Button isDisabled={isBtnDisabled} />
+      <Total>Total: {total.toFixed(2)}$</Total>
+      <Button isDisabled={isDisabled} />
     </StyledForm>
   );
 };
