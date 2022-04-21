@@ -1,8 +1,6 @@
-import { type } from "os";
-
 export interface ICheque {
-  bill: number;
-  persons: number;
+  bill: string | number;
+  persons: string | number;
   tip: number;
   total: number;
 }

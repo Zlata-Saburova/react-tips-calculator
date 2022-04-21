@@ -1,7 +1,7 @@
 import { StyledInput } from "./styles";
 
 interface IProps {
-  value: number;
+  value: string | number;
   name: string;
   type: string;
   placeholder: string;
@@ -21,7 +21,7 @@ export const Input = ({
 }: IProps) => {
   return (
     <StyledInput
-    value={value}
+      value={value}
       type={type}
       name={name}
       placeholder={placeholder}

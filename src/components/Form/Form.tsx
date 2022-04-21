@@ -10,8 +10,8 @@ import { CustomSelect } from "../CustomSelect/CustomSelect";
 
 export const Form = () => {
   const [cheque, setCheque] = useState<ICheque>({
-    bill: 0,
-    persons: 0,
+    bill: "",
+    persons: "",
     tip: 10,
     total: 0,
   });
@@ -36,7 +36,7 @@ export const Form = () => {
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     const sum: number =
-      (cheque.bill + cheque.bill * (+cheque.tip / 100)) / cheque.persons;
+      (+cheque.bill + +cheque.bill * (+cheque.tip / 100)) / +cheque.persons;
     if (cheque.bill && cheque.persons) {
       setCheque({
         ...cheque,
