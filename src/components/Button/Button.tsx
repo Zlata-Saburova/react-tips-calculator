@@ -1,13 +1,13 @@
 import { StyledButton } from "./styles";
 
 interface IButton {
-  disabled: boolean;
+  isDisabled: boolean;
 }
 
-export const Button = ({ disabled }: IButton) => {
+export const Button = ({ isDisabled }: IButton) => {
   return (
-    <StyledButton type="submit" disabled={disabled}>
-      Ohhhoooo 🍻{" "}
+    <StyledButton type="submit" disabled={isDisabled}>
+      Ohhhoooo 🍻
     </StyledButton>
   );
 };
