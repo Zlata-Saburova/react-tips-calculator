@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { Form } from "./components/Form/Form";
 
-function App() {
+const App = () => {
   return (
     <StyledApp>
       <Form />
     </StyledApp>
   );
-}
+};
 
 const StyledApp = styled.div`
   display: flex;
