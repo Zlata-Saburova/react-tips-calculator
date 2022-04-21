@@ -65,7 +65,7 @@ export const CustomSelect = ({ handleSelect, value }: IProps) => {
       onChange={handleSelect}
       styles={customStyles}
       value={options.find((item) => item.value === value)}
-      defaultValue={{ value: 10, label: "10%" }}
+      defaultValue={options[0]}
       isMulti={false}
     />
   );
