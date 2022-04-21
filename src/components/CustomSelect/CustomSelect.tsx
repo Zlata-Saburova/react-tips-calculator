@@ -1,4 +1,4 @@
-import Select, { SingleValue } from "react-select";
+import Select from "react-select";
 import { IOption } from "../../types/index";
 
 const options: IOption[] = [
@@ -8,7 +8,7 @@ const options: IOption[] = [
 ];
 
 interface ISelect {
-  onChange: (newValue: SingleValue<IOption>) => void;
+  onChange: (option: IOption | null) => void;
 }
 
 export const CustomSelect = ({ onChange }: ISelect) => {
