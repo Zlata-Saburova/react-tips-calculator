@@ -4,7 +4,6 @@ import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { ICheque } from "../../types";
-import { SingleValue } from "react-select";
 import { IOption } from "../../types/index";
 import { CustomSelect } from "../CustomSelect/CustomSelect";
 
@@ -24,7 +23,7 @@ export const Form = () => {
     });
   };
 
-  const handleSelect = (e: SingleValue<IOption>) => {
+  const handleSelect = (e: IOption | null) => {
     if (e) {
       setCheque({
         ...cheque,
@@ -46,7 +45,7 @@ export const Form = () => {
     }
   };
 
-  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+  const [isBtnDisabled, setIsBtnDisabled] = useState<boolean>(true);
 
   useEffect(() => {
     if (cheque.bill > 0 && cheque.persons > 0) {
