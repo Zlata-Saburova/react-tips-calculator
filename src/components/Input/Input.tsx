@@ -7,7 +7,7 @@ interface IProps {
   placeholder: string;
   min: string;
   step?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Input = ({
@@ -17,7 +17,7 @@ export const Input = ({
   placeholder,
   min,
   step,
-  onChange,
+  handleInput,
 }: IProps) => {
   return (
     <StyledInput
@@ -27,7 +27,7 @@ export const Input = ({
       placeholder={placeholder}
       min={min}
       step={step}
-      onChange={onChange}
+      onChange={handleInput}
     />
   );
 };
