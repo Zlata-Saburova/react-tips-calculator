@@ -12,7 +12,7 @@ export const Form = () => {
   const [cheque, setCheque] = useState<ICheque>({
     bill: "",
     persons: "",
-    tip: 10,
+    tip: { value: 10, label: "10%" },
     total: 0,
   });
 
@@ -28,7 +28,7 @@ export const Form = () => {
     if (e) {
       setCheque({
         ...cheque,
-        tip: e.value,
+        tip: e,
       });
     }
   };
@@ -36,7 +36,8 @@ export const Form = () => {
   const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     const sum: number =
-      (+cheque.bill + +cheque.bill * (+cheque.tip / 100)) / +cheque.persons;
+      (+cheque.bill + +cheque.bill * (+cheque.tip.value / 100)) /
+      +cheque.persons;
     if (cheque.bill && cheque.persons) {
       setCheque({
         ...cheque,
@@ -77,7 +78,7 @@ export const Form = () => {
           min="1"
           onChange={handleInput}
         ></Input>
-        <CustomSelect onChange={handleSelect}></CustomSelect>
+        <CustomSelect onChange={handleSelect} value={cheque.tip}></CustomSelect>
       </InputContainer>
       <Total>Total: {cheque.total.toFixed(2)}$</Total>
       <Button isDisabled={isBtnDisabled}></Button>

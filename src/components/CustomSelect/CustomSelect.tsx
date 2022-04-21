@@ -9,14 +9,16 @@ const options: IOption[] = [
 
 interface ISelect {
   onChange: (option: IOption | null) => void;
+  value: IOption;
 }
 
-export const CustomSelect = ({ onChange }: ISelect) => {
+export const CustomSelect = ({ onChange, value }: ISelect) => {
   return (
     <Select
       options={options}
       onChange={onChange}
       styles={customStyles}
+      value={value}
       defaultValue={{ value: 10, label: "10%" }}
     />
   );
