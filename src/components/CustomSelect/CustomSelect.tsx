@@ -7,12 +7,12 @@ const options: IOption[] = [
   { value: 20, label: "20%" },
 ];
 
-interface ISelect {
+interface IProps {
   handleSelect: (option: IOption | null) => void;
-  value: IOption;
+  value: IOption["value"];
 }
 
-export const CustomSelect = ({ handleSelect, value }: ISelect) => {
+export const CustomSelect = ({ handleSelect, value }: IProps) => {
   const customStyles: StylesConfig<IOption> = {
     option: (provided, state) => ({
       ...provided,
@@ -64,7 +64,7 @@ export const CustomSelect = ({ handleSelect, value }: ISelect) => {
       options={options}
       onChange={handleSelect}
       styles={customStyles}
-      value={value}
+      value={options.find((item) => item.value === value)}
       defaultValue={{ value: 10, label: "10%" }}
       isMulti={false}
     />
