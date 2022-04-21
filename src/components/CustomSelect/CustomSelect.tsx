@@ -37,6 +37,7 @@ export const CustomSelect = ({ handleSelect, value }: ISelect) => {
     singleValue: (provided) => ({
       ...provided,
       textAlign: "center",
+      color: "rgba(117, 108, 108, 0.6)",
     }),
 
     placeholder: (provided) => ({

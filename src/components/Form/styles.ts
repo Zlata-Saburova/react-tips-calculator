@@ -62,7 +62,7 @@ const Total = styled.p`
   font-size: 24px;
   line-height: 35px;
 
-  color: #000000;
+  color: rgb(0, 0, 0);
 
   @media (max-width: 768px) {
     font-size: 18px;

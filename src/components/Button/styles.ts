@@ -9,25 +9,25 @@ export const StyledButton = styled.button`
   font-weight: 400;
   font-size: 24px;
   line-height: 35px;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 
-  background-color: #2ed2c9;
+  background-color: rgb(46, 210, 201);
 
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #25ada5;
+    background-color: rgb(37, 173, 165);
   }
 
   &:active {
-    background-color: #2ed2c9;
+    background-color: rgb(46, 210, 201);
   }
 
   &:disabled {
     opacity: 0.5;
     cursor: default;
     &:hover {
-      background-color: #2ed2c9;
+      background-color: rgb(46, 210, 201);
     }
   }
 
