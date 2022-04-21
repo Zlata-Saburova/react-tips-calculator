@@ -13,7 +13,7 @@ export const StyledButton = styled.button`
 
   background-color: #2ed2c9;
 
-  transition: all 0.3s;
+  transition: background-color 0.3s;
 
   &:hover {
     background-color: #25ada5;
