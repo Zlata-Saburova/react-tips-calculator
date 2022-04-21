@@ -11,7 +11,7 @@ export const Form = () => {
   const [cheque, setCheque] = useState<ICheque>({
     bill: "",
     persons: "",
-    tip: { value: 10, label: "10%" },
+    tip: 10,
     total: 0,
   });
 
@@ -27,7 +27,7 @@ export const Form = () => {
     if (e) {
       setCheque({
         ...cheque,
-        tip: e,
+        tip: e.value,
       });
     }
   };
@@ -35,8 +35,7 @@ export const Form = () => {
   const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     const sum: number =
-      (+cheque.bill + +cheque.bill * (+cheque.tip.value / 100)) /
-      +cheque.persons;
+      (+cheque.bill + +cheque.bill * (+cheque.tip / 100)) / +cheque.persons;
     if (cheque.bill && cheque.persons) {
       setCheque({
         ...cheque,
