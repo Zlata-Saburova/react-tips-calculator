@@ -16,17 +16,11 @@ export const Form = () => {
     total: 0,
   });
 
-  const handleChangeBill = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
     setCheque({
       ...cheque,
-      bill: +e.target.value,
-    });
-  };
-
-  const handleChangePersons = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCheque({
-      ...cheque,
-      persons: +e.target.value,
+      [name]: +value,
     });
   };
 
@@ -67,17 +61,19 @@ export const Form = () => {
       <Text>Let`s go calculate your tips</Text>
       <InputContainer>
         <Input
+          name="bill"
           type="number"
           placeholder="Enter bill"
           min="0.01"
           step="0.01"
-          onChange={handleChangeBill}
+          onChange={handleInput}
         ></Input>
         <Input
+          name="persons"
           type="number"
           placeholder="Enter  persons"
           min="1"
-          onChange={handleChangePersons}
+          onChange={handleInput}
         ></Input>
         <CustomSelect onChange={handleSelect}></CustomSelect>
       </InputContainer>
