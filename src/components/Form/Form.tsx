@@ -69,7 +69,7 @@ export const Form = () => {
           min="0.01"
           step="0.01"
           onChange={handleInput}
-        ></Input>
+        />
         <Input
           value={cheque.persons}
           name="persons"
@@ -77,11 +77,11 @@ export const Form = () => {
           placeholder="Enter  persons"
           min="1"
           onChange={handleInput}
-        ></Input>
-        <CustomSelect onChange={handleSelect} value={cheque.tip}></CustomSelect>
+        />
+        <CustomSelect onChange={handleSelect} value={cheque.tip} />
       </InputContainer>
       <Total>Total: {cheque.total.toFixed(2)}$</Total>
-      <Button isDisabled={isBtnDisabled}></Button>
+      <Button isDisabled={isBtnDisabled} />
     </StyledForm>
   );
 };

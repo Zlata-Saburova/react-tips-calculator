@@ -28,6 +28,6 @@ export const Input = ({
       min={min}
       step={step}
       onChange={onChange}
-    ></StyledInput>
+    />
   );
 };
