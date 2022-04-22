@@ -16,8 +16,6 @@ button {
   border: 0;
   background: none;
   outline: none;
-
-  cursor: pointer;
 }
 
 input, select {
