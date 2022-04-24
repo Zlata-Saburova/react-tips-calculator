@@ -63,8 +63,6 @@ export const Form = () => {
         <Input
           value={bill}
           name="bill"
-          type="number"
-          placeholder="Enter bill"
           min="0.01"
           step="0.01"
           handleInput={handleInput}
@@ -72,8 +70,6 @@ export const Form = () => {
         <Input
           value={persons}
           name="persons"
-          type="number"
-          placeholder="Enter  persons"
           min="1"
           handleInput={handleInput}
         />
